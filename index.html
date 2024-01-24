@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-family: 'Cabin', sans-serif;
+      font-style: normal;
+      font-weight: 400;    
+    }
+
+    body {
+      height: 100vh;
+    }
+
+    .container {
+      height: 100%;
+      background-color: #f8f9fb;
+      margin: 0 20px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      position: relative;
+      width: fit-content;
+    }
+
+    .logo h1 {
+      width: fit-content;
+      letter-spacing: 0px;
+      font-size: 45px;
+      font-family: 'Anton';
+      font-size: 46px;
+    }
+
+    .logo svg {
+      position: absolute;
+      left: 25%;
+      bottom: 2px;
+    }
+
+    .certificate-info > * {
+      font-size: 14 px;
+      color: #787c7f;
+      font-weight: bold;
+      padding: 5px 0;
+      text-align: right;
+    }
+
+    .course-info {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .course-info span {
+      color: #787c7f;
+      font-weight: bold;
+    }
+    
+    .course-info h1 {
+      font-size: 100px;
+      font-weight: bolder;
+      margin: 15px 0 20px;
+    }
+
+    .course-info .instructor-name {
+      font-size: 18px;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .student-info > * {
+      padding: 5px 0;
+    }
+
+    .student-info h2 {
+      font-size: 50px;
+      font-weight: bolder;
+      padding-bottom: 10px;
+    }
+    
+  </style>
+  <title>Certificate</title>
+</head>
+<body>
+  <div class="container">
+    <div class="info">
+      <div class="logo">
+        <h1>MindMission</h1>
+        <svg width="185" height="6" viewBox="0 0 185 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M184.56 5.05592C180.484 5.28563 176.441 5.74533 172.314 5.69934C160.16 5.56298 147.976 5.16911 135.816 4.98234C123.999 4.80072 112.193 4.74193 100.39 4.6501C78.6351 4.4808 56.8723 4.27763 35.1317 4.18711C25.8738 4.1483 16.6689 4.35763 7.42329 4.42513C6.30944 4.43067 4.78798 4.45918 4.09821 4.10488C2.57785 3.33516 1.47234 2.32129 0.202533 1.41076C1.58071 0.960595 2.88667 0.11107 4.36373 0.117832C22.7271 0.15005 41.0897 0.193281 59.4872 0.449973C79.9219 0.735861 100.391 1.24071 120.837 1.64393C127.996 1.78715 135.139 1.8516 142.303 2.05625C145.116 2.13619 147.953 2.57282 150.773 2.70868C152.276 2.78402 153.763 2.40351 155.254 2.49455C162.678 2.96382 170.094 3.52123 177.512 4.05661C179.83 4.22455 182.134 4.42472 184.45 4.60919C184.491 4.75654 184.52 4.90857 184.56 5.05592Z" fill="#181818"/>
+        </svg>
+      </div>
+      <div class="certificate-info">
+        <div id="certificateNo" class="certificate-no"></div>
+        <div id="certificateUrl" class="certificate-url"></div>
+      </div>
+    </div>
+    <div class="course-info">
+      <span></span>
+      <h1 id="courseTitle"></h1>
+      <p class="instructor-name">
+        Instructor <b id="instructorName"></b>
+      </p>
+    </div>
+    <div class="footer">
+      <div class="student-info">
+        <h2 id="studentName"></h2>
+        <div class="certificate-date">
+          Date <b id="date"></b>
+        </div>
+        <div class="course-hours">
+          Length: <b id="courseHours"></b>
+        </div>
+      </div>
+      <div id="qrcode"></div>
+    </div>
+  </div>
+</body>
+</html>
